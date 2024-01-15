@@ -7,14 +7,16 @@ class Movie
     public $director;
     public $year;
     public $genres;
+    public $posterUrl;
 
     // Definisco il construct per le variabili
-    function __construct($title, $director, $year, $genres = [])
+    function __construct($title, $director, $year, $genres = [], $posterUrl = "")
     {
         $this->title = $title;
         $this->director = $director;
         $this->year = $year;
         $this->genres = $genres;
+        $this->posterUrl = $posterUrl;
     }
 
     // Funzione per il return del film

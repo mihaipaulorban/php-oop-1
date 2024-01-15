@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
+
+body {
+  background: linear-gradient(105deg, #f8e2fc, #6994e2, #ff7e37);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+/* Animazione sfondo */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Card */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 600px;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+}
+
+/* Background Trasparente */
+.myback {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Animazione titolo */
+
+svg {
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #000000;
+  font-size: 100px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgba(0, 0, 0, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgba(0, 0, 0, 1);
+  }
+  80% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgba(0, 0, 0, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(0, 0, 0, 1);
+    stroke: rgba(0, 0, 0, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}

@@ -1,10 +1,22 @@
 <?php
-include 'movie.php';
+// Autoload per registrare eventuali classi aggiunte
+spl_autoload_register(function ($class_name) {
+    include 'Classes/' . $class_name . '.php';
+});
 
-// Aggiungo alla classe il film con i valori
-$movie1 = new Movie("Il Padrino", "Francis Ford Coppola", 1972, ["Drammatico", "Crime"]);
-$movie2 = new Movie("Pulp Fiction", "Quentin Tarantino", 1994, ["Crime", "Commedia", "Drammatico"]);
+// Includo sezioni da partials
+include 'partials/header.php';
+include 'partials/movieCard.php';
 
-echo $movie1->getMovieInfo();
-echo "<br>";
-echo $movie2->getMovieInfo();
+$movies = include 'data/db.php';
+?>
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <?php foreach ($movies as $movie) {
+            renderMovieCard($movie);
+        } ?>
+    </div>
+</div>
+<?php
+include 'partials/footer.php';
+?>
