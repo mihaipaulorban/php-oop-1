@@ -18,8 +18,8 @@ Tecnologie Utilizzate
 
 ## Struttura del progetto
 
-`index.php`: La pagina principale che visualizza i film.
-`Classes/`: Contiene la definizione della classe Movie.
-`data/db.php`: Il database fittizio che restituisce un array di oggetti Movie.
-`partials/`: Contiene i parziali HTML per il header, il footer e la card del film.
-`styles/`: Contiene i file CSS per lo styling personalizzato.
+- `index.php`: La pagina principale che visualizza i film.
+- `Classes/`: Contiene la definizione della classe Movie.
+- `data/db.php`: Il database fittizio che restituisce un array di oggetti Movie.
+- `partials/`: Contiene i parziali HTML per il header, il footer e la card del film.
+- `styles/`: Contiene i file CSS per lo styling personalizzato.
